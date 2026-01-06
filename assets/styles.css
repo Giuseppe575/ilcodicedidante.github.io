@@ -89,6 +89,15 @@ main {
   place-items: center;
 }
 
+.nav-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .nav-links {
   display: flex;
   gap: 18px;
@@ -216,6 +225,31 @@ main {
   background: linear-gradient(0deg, rgba(6, 10, 20, 0.98), rgba(8, 14, 26, 0.5) 60%, rgba(8, 14, 26, 0.12));
 }
 
+.app-card-top {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.app-title-top {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.65);
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
 .app-card-cover.is-visible {
   opacity: 1;
   transform: translateY(0);
@@ -267,6 +301,22 @@ main {
 
 .app-card-content p {
   color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-wrap {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-pic {
+  width: 96px;
+  height: 96px;
+  border-radius: 24px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 }
 
 .card h3 {
@@ -373,6 +423,10 @@ main {
   color: var(--ink-700);
 }
 
+.theme-light .nav-logo {
+  border-color: rgba(0, 0, 0, 0.12);
+}
+
 .theme-light .hero,
 .theme-light .section {
   background: none;
@@ -404,6 +458,11 @@ main {
   color: var(--ink-700);
 }
 
+.theme-light .profile-pic {
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -426,6 +485,12 @@ main {
   .app-card-cover {
     min-height: 240px;
     padding: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .app-title-top {
+    font-size: 18px;
   }
 }
 
