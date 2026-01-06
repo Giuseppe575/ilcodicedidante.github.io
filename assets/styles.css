@@ -316,7 +316,7 @@ main {
   height: 96px;
   border-radius: 24px;
   object-fit: cover;
-  object-position: center 45%;
+  object-position: center 55%;
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
   background-color: #111;
