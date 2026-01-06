@@ -29,7 +29,7 @@ if (filterChips.length > 0 && appCards.length > 0) {
 }
 
 // Card entry animations
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.card, .app-card-cover');
 if (cards.length > 0) {
   const maxDelay = 240;
 
