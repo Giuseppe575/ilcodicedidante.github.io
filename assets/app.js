@@ -13,10 +13,49 @@ if (filterChips.length > 0 && appCards.length > 0) {
       appCards.forEach((card) => {
         const category = card.dataset.category;
         const shouldShow = filter === 'tutte' || category === filter;
-        card.style.display = shouldShow ? 'flex' : 'none';
+
+        if (shouldShow) {
+          card.style.display = 'flex';
+          card.classList.remove('is-visible');
+          window.requestAnimationFrame(() => {
+            card.classList.add('is-visible');
+          });
+        } else {
+          card.style.display = 'none';
+        }
       });
     });
   });
+}
+
+// Card entry animations
+const cards = document.querySelectorAll('.card');
+if (cards.length > 0) {
+  const maxDelay = 240;
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+
+    cards.forEach((card, index) => {
+      card.style.transitionDelay = `${Math.min(index * 80, maxDelay)}ms`;
+      observer.observe(card);
+    });
+  } else {
+    cards.forEach((card, index) => {
+      card.style.transitionDelay = `${Math.min(index * 80, maxDelay)}ms`;
+      setTimeout(() => card.classList.add('is-visible'), 60);
+    });
+  }
 }
 
 // Current year in footer

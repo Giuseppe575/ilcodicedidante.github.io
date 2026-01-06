@@ -169,6 +169,14 @@ main {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card h3 {
@@ -318,5 +326,17 @@ main {
 
   .hero {
     padding: 70px 0 50px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .btn {
+    transition: none;
   }
 }
