@@ -315,8 +315,9 @@ main {
   width: 120px;
   height: 120px;
   border-radius: 24px;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center;
+  background: rgba(8, 14, 26, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 }
@@ -481,6 +482,7 @@ main {
 .theme-light .profile-pic {
   border-color: rgba(0, 0, 0, 0.12);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  background: rgba(10, 12, 17, 0.06);
 }
 
 .theme-light .skill-chip {
