@@ -330,9 +330,9 @@ main {
 .skill-chip {
   padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(63, 225, 182, 0.35);
-  background: rgba(63, 225, 182, 0.12);
-  color: #0f3d33;
+  border: 1px solid rgba(63, 225, 182, 0.45);
+  background: rgba(63, 225, 182, 0.18);
+  color: #0b2f27;
   font-weight: 600;
   font-size: 0.9rem;
 }
@@ -482,9 +482,9 @@ main {
 }
 
 .theme-light .skill-chip {
-  border-color: rgba(0, 0, 0, 0.12);
-  background: rgba(10, 12, 17, 0.04);
-  color: var(--ink-700);
+  border-color: rgba(0, 0, 0, 0.16);
+  background: rgba(10, 12, 17, 0.08);
+  color: #20242b;
 }
 
 @media (max-width: 768px) {
