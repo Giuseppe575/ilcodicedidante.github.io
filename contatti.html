@@ -1,66 +1,111 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Contatti | Il Codice di Dante</title>
-    <link rel="stylesheet" href="assets/styles.css" />
-  </head>
-  <body class="theme-light">
-    <header class="site-header">
-      <div class="container navbar">
-        <div class="brand">
-          <img class="nav-logo" src="assets/logo codice.png" alt="Il Codice di Dante" width="40" height="40" />
-          <span>Il Codice di Dante</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contatti | Il Codice di Dante</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar container">
+    <div class="nav-logo-group">
+      <img src="assets/logo codice.png" alt="Logo" class="brand-logo-img" />
+      <span>Il Codice di Dante</span>
+    </div>
+    <div class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Diffusione</a>
+      <a href="chi-sono.html">Chi sono</a>
+      <a href="contatti.html" style="color: var(--color-primary);">Contatti</a>
+    </div>
+    <a href="contatti.html" class="nav-cta btn-primary">Contattami</a>
+  </nav>
+
+  <main>
+    <section class="section" style="padding-top: 60px;">
+      <div class="container">
+        <div class="about-section" style="margin-top: 0;"> <!-- Reusing the dark box style -->
+          <div class="about-grid">
+            <div class="about-content">
+              <span style="color: var(--color-primary); font-weight: 700; letter-spacing: 0.05em;">PARLIAMONE</span>
+              <h1 style="color: #fff; font-size: 3rem; margin-bottom: 24px;">Contatti</h1>
+              <p style="margin-bottom: 30px; font-size: 1.1rem; color: rgba(255,255,255,0.7);">
+                Per richieste, collaborazioni o semplicemente per un saluto, puoi scrivermi direttamente.
+                Cerco di rispondere a tutti il prima possibile.
+              </p>
+
+              <div style="display: flex; flex-direction: column; gap: 16px;">
+                <a href="mailto:atis.giuseppe@gmail.com" class="btn btn-primary" style="align-self: flex-start;">
+                  atis.giuseppe@gmail.com
+                </a>
+                <div style="display: flex; gap: 16px; margin-top: 10px;">
+                  <a href="https://linktr.ee/ilcodicedidante" target="_blank" class="btn btn-ghost"
+                    style="color: #fff; padding-left: 0;">Linktree →</a>
+                  <a href="https://ilcodedidante.blogspot.com/" target="_blank" class="btn btn-ghost"
+                    style="color: #fff;">Blog Ufficiale →</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-image-wrapper">
+              <div
+                style="background: rgba(255,255,255,0.05); padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.1);">
+                <h3 style="color: #fff; margin-bottom: 20px;">Risposta Rapida</h3>
+                <p style="color: rgba(255,255,255,0.6); margin-bottom: 20px;">
+                  Se mi contatti per un progetto specifico (es. <strong>Roastami</strong> o <strong>Movarisch</strong>),
+                  indicalo nell'oggetto della mail per facilitare la risposta.
+                </p>
+                <ul
+                  style="list-style: none; color: rgba(255,255,255,0.8); display: flex; flex-direction: column; gap: 12px;">
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <div class="icon-box"
+                      style="width: 24px; height: 24px; background: rgba(16, 185, 129, 0.2); color: #10B981;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </div>
+                    Supporto Tecnico
+                  </li>
+                  <li style="display: flex; align-items: center; gap: 10px;">
+                    <div class="icon-box"
+                      style="width: 24px; height: 24px; background: rgba(139, 92, 246, 0.2); color: #8B5CF6;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </div>
+                    Collaborazioni
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <nav class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="apps.html">Apps</a>
-          <a href="chi-sono.html">Chi sono</a>
-          <a href="contatti.html">Contatti</a>
-        </nav>
       </div>
-    </header>
+    </section>
+  </main>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <h1>Contatti</h1>
-            <p>
-              Per richieste o collaborazioni puoi scrivermi direttamente via email
-              oppure seguire i miei canali principali.
-            </p>
-          </div>
-          <div class="hero-card">
-            <h2>Scrivimi</h2>
-            <p>Email: <a href="mailto:atis.giuseppe@gmail.com">atis.giuseppe@gmail.com</a></p>
-            <p><a href="https://linktr.ee/ilcodicedidante" target="_blank" rel="noopener">Linktree ufficiale</a></p>
-            <p><a href="https://ilcodedidante.blogspot.com/" target="_blank" rel="noopener">Blog ufficiale</a></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="card">
-            <h3>Risposta rapida</h3>
-            <p>
-              Cerco di rispondere il prima possibile. Se il progetto riguarda un'app specifica,
-              indica il nome per facilitare il contatto.
-            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div class="container footer-grid">
-        <small>© <span data-year></span> Il Codice di Dante</small>
-        <small>Questo sito &egrave; una vetrina/directory dei progetti. Ogni applicazione pu&ograve; avere un proprio sito dedicato con condizioni e funzionalit&agrave; autonome.</small>
+  <footer class="footer-cta container">
+    <div class="footer-bar" style="margin-top: 40px; border-top: 1px solid var(--border-light); padding-top: 30px;">
+      <div style="display: flex; gap: 20px; font-weight: 500;">
+        <span>Il Codice di Dante</span>
       </div>
-    </footer>
+      <div style="display: flex; gap: 20px;">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://github.com/Giuseppe575" target="_blank">GitHub</a>
+      </div>
+      <div>
+        © <span data-year>2024</span> Creato con passione.
+      </div>
+    </div>
+  </footer>
 
-    <script src="assets/app.js"></script>
-  </body>
+  <script src="assets/app.js"></script>
+</body>
+
 </html>

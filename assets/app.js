@@ -28,8 +28,8 @@ if (filterChips.length > 0 && appCards.length > 0) {
   });
 }
 
-// Card entry animations
-const cards = document.querySelectorAll('.card, .app-card-cover');
+// Card entry animations - Updated for new Design System
+const cards = document.querySelectorAll('.card, .app-card-cover, .app-card, .hero-card-featured');
 if (cards.length > 0) {
   const maxDelay = 240;
 
@@ -47,6 +47,7 @@ if (cards.length > 0) {
     );
 
     cards.forEach((card, index) => {
+      // Add initial state class if not present in CSS/HTML (though CSS usually handles opacity:0)
       card.style.transitionDelay = `${Math.min(index * 80, maxDelay)}ms`;
       observer.observe(card);
     });

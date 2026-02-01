@@ -1,84 +1,144 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>App directory | Il Codice di Dante</title>
-    <link rel="stylesheet" href="assets/styles.css" />
-  </head>
-  <body class="theme-dark">
-    <header class="site-header">
-      <div class="container navbar">
-        <div class="brand">
-          <img class="nav-logo" src="assets/logo codice.png" alt="Il Codice di Dante" width="40" height="40" />
-          <span>Il Codice di Dante</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App directory | Il Codice di Dante</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar container">
+    <div class="nav-logo-group">
+      <img src="assets/logo codice.png" alt="Logo" class="brand-logo-img" />
+      <span>Il Codice di Dante</span>
+    </div>
+    <div class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="apps.html" style="color: var(--color-primary);">Diffusione</a>
+      <a href="chi-sono.html">Chi sono</a>
+      <a href="contatti.html">Contatti</a>
+    </div>
+    <a href="contatti.html" class="nav-cta btn-primary">Contattami</a>
+  </nav>
+
+  <main>
+    <section class="hero" style="min-height: 40vh; padding-bottom: 40px;">
+      <div class="hero-blur"></div>
+      <div class="container" style="text-align: center; max-width: 800px;">
+        <span
+          style="font-weight: 600; color: var(--color-primary); display: block; margin-bottom: 12px; letter-spacing: 0.05em;">DIRECTORY</span>
+        <h1 style="margin-bottom: 24px;">Esplora tutte le applicazioni</h1>
+        <p class="section-desc" style="margin: 0 auto 40px;">
+          Filtra per categoria e apri subito il sito dedicato di ogni progetto.
+          Qui trovi solo software verificati e mantenuti.
+        </p>
+
+        <!-- Filter Logic -->
+        <div class="filter-row" style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+          <!-- NOTE: Styles for chips need to be added or we can use ghost buttons -->
+          <button class="btn btn-primary" data-filter="tutte">Tutte</button>
+          <button class="btn btn-ghost" data-filter="giochi">Giochi & Virali</button>
+          <button class="btn btn-ghost" data-filter="professionale">Professionali</button>
         </div>
-        <nav class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="apps.html">Apps</a>
-          <a href="chi-sono.html">Chi sono</a>
-          <a href="contatti.html">Contatti</a>
-        </nav>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="hero">
-        <div class="container">
-          <h1>Esplora tutte le applicazioni</h1>
-          <p class="section-subtitle">
-            Filtra per categoria e apri subito il sito dedicato di ogni progetto.
-          </p>
-          <div class="filter-row" aria-label="Filtro categorie">
-            <button class="chip is-active" data-filter="tutte" type="button">Tutte</button>
-            <button class="chip" data-filter="giochi" type="button">Giochi & Virali</button>
-            <button class="chip" data-filter="professionale" type="button">Professionale</button>
-          </div>
-        </div>
-      </section>
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="apps-grid">
 
-      <section class="section">
-        <div class="container">
-          <div class="card-grid app-grid">
-            <article class="app-card-cover app-card-cover--deep" data-category="giochi" style="background-image: url('assets/covers/roastami.png'); background-position: center top;">
-              <div class="app-card-top">
-                <h3 class="app-title-top">Roastami</h3>
-              </div>
-              <span class="badge">Giochi & Virali</span>
-              <div class="app-card-content">
-                <p>Carica un profilo, ottieni un roast istantaneo. Condividilo.</p>
-                <div class="card-actions">
-                  <a class="btn btn-primary" href="https://roastami.streamlit.app/" target="_blank" rel="noopener">Apri</a>
-                  <a class="btn btn-secondary" href="app-roastami.html">Scheda</a>
+          <!-- Roastami -->
+          <article class="app-card" data-category="giochi">
+            <img src="assets/covers/roastami.png" alt="Roastami App Interface" class="app-card-image">
+            <div class="app-card-body">
+              <div>
+                <div class="app-tags">
+                  <span class="tag tag-creative">CREATIVO</span>
+                  <span class="tag" style="background: rgba(0,0,0,0.05);">WEB APP</span>
                 </div>
+                <h3>Artistic Vision / Roastami</h3>
+                <p>Esplora il confine tra codice e arte digitale. Carica un profilo, ottieni un roast istantaneo e
+                  condidivilo.</p>
               </div>
-            </article>
+              <div style="display: flex; gap: 20px;">
+                <a href="https://roastami.streamlit.app/" target="_blank" class="app-link">
+                  Apri App
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+                <a href="app-roastami.html" class="app-link" style="color: var(--text-secondary);">Scheda</a>
+              </div>
+            </div>
+          </article>
 
-            <article class="app-card-cover" data-category="professionale" style="background-image: url('assets/covers/movarisch.png'); background-position: center;">
-              <div class="app-card-top">
-                <h3 class="app-title-top">MOVARISCH</h3>
-              </div>
-              <span class="badge">Professionale</span>
-              <div class="app-card-content">
-                <p>Software per PC (Windows) per analisi del rischio chimico da SDS/TDS.</p>
-                <div class="card-actions">
-                  <a class="btn btn-primary" href="https://giuseppe575.github.io/movarisch-site/" target="_blank" rel="noopener">Vai al sito</a>
-                  <a class="btn btn-secondary" href="app-movarisch.html">Scheda</a>
+          <!-- Movarisch -->
+          <article class="app-card" data-category="professionale">
+            <img src="assets/covers/movarisch.png" alt="Movarisch Pro Toolkit" class="app-card-image">
+            <div class="app-card-body">
+              <div>
+                <div class="app-tags">
+                  <span class="tag tag-pro">PROFESSIONALE</span>
+                  <span class="tag" style="background: rgba(0,0,0,0.05);">DESKTOP</span>
                 </div>
+                <h3>Pro Toolkit / MOVARISCH</h3>
+                <p>Strumenti di precisione per il workflow moderno. Software per analisi del rischio chimico da SDS.</p>
               </div>
-            </article>
-          </div>
-        </div>
-      </section>
-    </main>
+              <div style="display: flex; gap: 20px;">
+                <a href="https://giuseppe575.github.io/movarisch-site/" target="_blank" class="app-link">
+                  Vai al sito
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+                <a href="app-movarisch.html" class="app-link" style="color: var(--text-secondary);">Scheda</a>
+              </div>
+            </div>
+          </article>
 
-    <footer class="footer">
-      <div class="container footer-grid">
-        <small>© <span data-year></span> Il Codice di Dante</small>
-        <small>Questo sito &egrave; una vetrina/directory dei progetti. Ogni applicazione pu&ograve; avere un proprio sito dedicato con condizioni e funzionalit&agrave; autonome.</small>
+        </div>
       </div>
-    </footer>
+    </section>
+  </main>
 
-    <script src="assets/app.js"></script>
-  </body>
+  <footer class="footer-cta container">
+    <div class="footer-bar" style="margin-top: 40px; border-top: 1px solid var(--border-light); padding-top: 30px;">
+      <div style="display: flex; gap: 20px; font-weight: 500;">
+        <span>Il Codice di Dante</span>
+      </div>
+      <div style="display: flex; gap: 20px;">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="https://github.com/Giuseppe575" target="_blank">GitHub</a>
+      </div>
+      <div>
+        © <span data-year>2024</span> Creato con passione.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+  <script>
+    // Simple inline script to handle button active state visualization, logic is in app.js
+    const btns = document.querySelectorAll('.filter-row .btn');
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => {
+          b.classList.remove('btn-primary');
+          b.classList.add('btn-ghost');
+        });
+        btn.classList.remove('btn-ghost');
+        btn.classList.add('btn-primary');
+      });
+    });
+  </script>
+</body>
+
 </html>

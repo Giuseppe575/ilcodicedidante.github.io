@@ -1,97 +1,211 @@
 <!doctype html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Il Codice di Dante | Vetrina progetti</title>
-    <link rel="stylesheet" href="assets/styles.css" />
-  </head>
-  <body class="theme-dark">
-    <header class="site-header">
-      <div class="container navbar">
-        <div class="brand">
-          <img class="nav-logo" src="assets/logo codice.png" alt="Il Codice di Dante" width="40" height="40" />
-          <span>Il Codice di Dante</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il Codice di Dante | Directory Creativa</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <meta name="description"
+    content="Una directory di progetti creativi e professionali. Il Codice di Dante raccoglie applicazioni diverse per stile e pubblico.">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar container">
+    <div class="nav-logo-group">
+      <img src="assets/logo codice.png" alt="Logo" class="brand-logo-img" />
+      <span>Il Codice di Dante</span>
+    </div>
+    <div class="nav-menu">
+      <a href="index.html">Home</a>
+      <a href="apps.html">Diffusione</a>
+      <a href="chi-sono.html">Chi sono</a>
+      <a href="contatti.html">Contatti</a>
+    </div>
+    <a href="contatti.html" class="nav-cta btn-primary">Contattami</a>
+  </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="hero-blur"></div>
+      <div class="container hero-content">
+
+        <!-- Left Text -->
+        <div class="hero-text">
+          <span
+            style="font-weight: 600; color: var(--color-primary); display: block; margin-bottom: 12px; letter-spacing: 0.05em;">DIRECTORY
+            CREATIVA</span>
+          <h1>Una directory di <br><span class="highlight">progetti creativi</span> e professionali.</h1>
+          <p class="lead">
+            Il Codice di Dante raccoglie applicazioni diverse per stile e pubblico.
+            Ogni progetto ha un proprio sito dedicato: qui trovi la vetrina e la strada più diretta per scoprirli.
+          </p>
+          <a href="#featured" class="btn btn-primary">Esplora Progetti</a>
         </div>
-        <nav class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="apps.html">Apps</a>
-          <a href="chi-sono.html">Chi sono</a>
-          <a href="contatti.html">Contatti</a>
-        </nav>
+
+        <!-- Right Card/Feature -->
+        <div class="hero-card-featured">
+          <h3>Perché questa vetrina</h3>
+          <ul class="hero-features-list">
+            <li>
+              <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v20M2 12h20M12 2l4 4M12 2 8 6" />
+                </svg>
+              </div>
+              Unione tra creatività pura e tecnologia applicata.
+            </li>
+            <li>
+              <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg>
+              </div>
+              Strumenti utili in un unico spazio centralizzato.
+            </li>
+            <li>
+              <div class="icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <circle cx="12" cy="12" r="4" />
+                  <line x1="21.17" y1="8" x2="12" y2="8" />
+                  <line x1="3.95" y1="6.06" x2="8.54" y2="14" />
+                  <line x1="10.88" y1="21.94" x2="15.46" y2="14" />
+                </svg>
+              </div>
+              Esplora liberamente: nessuna vendita diretta, solo scoperta.
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <h1>Una directory di progetti creativi e professionali</h1>
-            <p>
-              Il Codice di Dante raccoglie applicazioni diverse per stile e pubblico.
-              Ogni progetto ha un proprio sito dedicato: qui trovi la vetrina e la
-              strada piu diretta per scoprirli.
-            </p>
-          </div>
-          <div class="hero-card">
-            <h2>Perche questa vetrina</h2>
-            <p>
-              Voglio unire creativita, tecnologia e strumenti utili in un unico
-              spazio. Nessuna vendita diretta: solo progetti che puoi esplorare.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
+    <!-- Featured Apps Section -->
+    <section id="featured" class="section">
+      <div class="container">
+        <div class="section-header">
           <h2 class="section-title">App in evidenza</h2>
-          <p class="section-subtitle">
-            Due esperienze diverse: una creativa e virale, l'altra professionale e focalizzata
-            su strumenti concreti per il lavoro.
-          </p>
-          <div class="card-grid featured-grid">
-            <article class="app-card-cover app-card-cover--deep" style="background-image: url('assets/covers/roastami.png'); background-position: center top;">
-              <div class="app-card-top">
-                <h3 class="app-title-top">Roastami</h3>
-              </div>
-              <span class="badge">Giochi & Virali</span>
-              <div class="app-card-content">
-                <p>Carica un profilo, ottieni un roast istantaneo. Condividilo.</p>
-                <div class="card-actions">
-                  <a class="btn btn-primary" href="https://roastami.streamlit.app/" target="_blank" rel="noopener">Apri</a>
-                  <a class="btn btn-secondary" href="app-roastami.html">Scheda</a>
+          <p class="section-desc">Due esperienze diverse: una creativa e virale, l'altra professionale e focalizzata su
+            strumenti concreti.</p>
+        </div>
+
+        <div class="apps-grid">
+
+          <!-- Roastami -->
+          <article class="app-card">
+            <img src="assets/covers/roastami.png" alt="Roastami App Interface" class="app-card-image">
+            <div class="app-card-body">
+              <div>
+                <div class="app-tags">
+                  <span class="tag tag-creative">CREATIVO</span>
+                  <span class="tag" style="background: rgba(0,0,0,0.05);">WEB APP</span>
                 </div>
+                <h3>Artistic Vision / Roastami</h3>
+                <p>Esplora il confine tra codice e arte digitale. Carica un profilo, ottieni un roast istantaneo e
+                  condidivilo.</p>
               </div>
-            </article>
-            <article class="app-card-cover" style="background-image: url('assets/covers/movarisch.png'); background-position: center;">
-              <div class="app-card-top">
-                <h3 class="app-title-top">MOVARISCH</h3>
+              <div style="display: flex; gap: 20px;">
+                <a href="https://roastami.streamlit.app/" target="_blank" class="app-link">
+                  Apri App
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+                <a href="app-roastami.html" class="app-link" style="color: var(--text-secondary);">Scheda</a>
               </div>
-              <span class="badge">Professionale</span>
-              <div class="app-card-content">
-                <p>Software per PC (Windows) per analisi del rischio chimico da SDS/TDS.</p>
-                <div class="card-actions">
-                  <a class="btn btn-primary" href="https://giuseppe575.github.io/movarisch-site/" target="_blank" rel="noopener">Vai al sito</a>
-                  <a class="btn btn-secondary" href="app-movarisch.html">Scheda</a>
+            </div>
+          </article>
+
+          <!-- Movarisch -->
+          <article class="app-card">
+            <img src="assets/covers/movarisch.png" alt="Movarisch Pro Toolkit" class="app-card-image">
+            <div class="app-card-body">
+              <div>
+                <div class="app-tags">
+                  <span class="tag tag-pro">PROFESSIONALE</span>
+                  <span class="tag" style="background: rgba(0,0,0,0.05);">DESKTOP</span>
                 </div>
+                <h3>Pro Toolkit / MOVARISCH</h3>
+                <p>Strumenti di precisione per il workflow moderno. Software per analisi del rischio chimico da SDS.</p>
               </div>
-            </article>
+              <div style="display: flex; gap: 20px;">
+                <a href="https://giuseppe575.github.io/movarisch-site/" target="_blank" class="app-link">
+                  Vai al sito
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="7" y1="17" x2="17" y2="7" />
+                    <polyline points="7 7 17 7 17 17" />
+                  </svg>
+                </a>
+                <a href="app-movarisch.html" class="app-link" style="color: var(--text-secondary);">Scheda</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div style="margin-top: 50px; text-align: center;">
+          <a href="apps.html" class="btn btn-ghost">Scopri tutte le app →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section (Dark) -->
+    <section class="container">
+      <div class="about-section">
+        <div class="about-grid">
+          <div class="about-content">
+            <h2>Chi sono</h2>
+            <p>
+              Sono uno sviluppatore e designer appassionato di creare ponti tra il mondo estetico e quello funzionale.
+              "Il Codice di Dante" è il mio spazio sperimentale dove ogni progetto racconta una storia diversa.
+            </p>
+
+
           </div>
-          <div style="margin-top: 36px;">
-            <a class="btn btn-secondary" href="apps.html">Scopri tutte le app</a>
+
+          <div class="about-image-wrapper">
+            <img src="assets/profilo.png"
+              onerror="this.src='https://ui-avatars.com/api/?name=Giuseppe&background=random&size=400'"
+              class="about-img" alt="Profile">
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
 
-    <footer class="footer">
-      <div class="container footer-grid">
-        <small>© <span data-year></span> Il Codice di Dante</small>
-        <small>Questo sito &egrave; una vetrina/directory dei progetti. Ogni applicazione pu&ograve; avere un proprio sito dedicato con condizioni e funzionalit&agrave; autonome.</small>
+    <!-- CTA / Footer -->
+    <footer class="footer-cta container">
+      <h2>Hai un'idea folle?</h2>
+      <p>Sono sempre alla ricerca di collaborazioni stimolanti e nuove sfide tecniche. Parliamone.</p>
+      <a href="mailto:contatti@ilcodicedidante.com" class="btn btn-primary">Invia una Mail</a>
+
+      <div class="footer-bar" style="margin-top: 80px;">
+        <div style="display: flex; gap: 20px; font-weight: 500;">
+          <span>Il Codice di Dante</span>
+        </div>
+        <div style="display: flex; gap: 20px;">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="https://github.com/Giuseppe575" target="_blank">GitHub</a>
+        </div>
+        <div>
+          © <span data-year>2024</span> Creato con passione.
+        </div>
       </div>
     </footer>
 
-    <script src="assets/app.js"></script>
-  </body>
+  </main>
+
+  <script src="assets/app.js"></script>
+</body>
+
 </html>
