@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-3",
+  "channel": "beta",
+  "artifact": "nsis",
+  "installer_file": "MMC Pro_1.0.0-3_x64-setup.exe",
+  "installer_path": "src-tauri\\target\\release\\bundle\\nsis\\MMC Pro_1.0.0-3_x64-setup.exe",
+  "signature_path": "src-tauri\\target\\release\\bundle\\nsis\\MMC Pro_1.0.0-3_x64-setup.exe.sig",
+  "generated_at": "2026-03-30T16:18:21.033Z",
+  "base_url": "https://www.ilcodicedidante.it/mmc-pro-updates/downloads",
+  "static_manifest": "latest.json",
+  "dynamic_manifest": "latest-dynamic.json"
+}
