@@ -79,7 +79,7 @@
   <h1>Dal sopralluogo al <span class="hl">verbale in minuti</span></h1>
   <p class="sub">Scatti la foto, descrivi a voce: l'AI scrive il testo tecnico e genera il
      verbale PDF conforme al D.Lgs 81/08, col tuo logo. Tu controlli e firmi.</p>
-  <a class="cta" href="https://rilievo-atis.web.app" target="_blank" rel="noopener">Apri l'app — provala gratis →</a>
+  <a class="cta" href="https://rilievo-atis.web.app" target="_blank" rel="noopener" onclick="rilievoLead()">Apri l'app — provala gratis →</a>
   <p style="margin-top:16px;color:var(--accent);font-weight:700;font-size:15px">🎁 5 crediti gratis alla registrazione — abbastanza per il tuo primo verbale completo</p>
 </header>
 
@@ -116,13 +116,49 @@
 </section>
 
 <section class="wrap center">
-  <a class="cta" href="https://rilievo-atis.web.app" target="_blank" rel="noopener">Inizia ora — il primo verbale è tuo →</a>
+  <a class="cta" href="https://rilievo-atis.web.app" target="_blank" rel="noopener" onclick="rilievoLead()">Inizia ora — il primo verbale è tuo →</a>
 </section>
 
 <footer>
   RILIEVO — un progetto <a href="https://www.ilcodicedidante.it">Il Codice di Dante</a> ·
-  ATIS — Strifezza Giuseppe · <a href="https://rilievo-atis.web.app">rilievo-atis.web.app</a>
+  ATIS — Strifezza Giuseppe · <a href="https://rilievo-atis.web.app">rilievo-atis.web.app</a> ·
+  <a href="https://www.ilcodicedidante.it/privacy.html">Privacy</a>
 </footer>
+
+<!-- ===== Banner consenso cookie (GDPR): il Pixel parte solo su "Accetta" ===== -->
+<div id="cookie-banner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9999;
+  background:var(--surface);border-top:1px solid rgba(255,255,255,.12);padding:14px 18px;
+  display:none;gap:12px;align-items:center;flex-wrap:wrap;justify-content:center;font-size:13px;color:var(--ink-2)">
+  <span style="flex:1;min-width:220px">Usiamo cookie di marketing (Meta Pixel) per misurare le campagne pubblicitarie. Vedi la <a href="https://www.ilcodicedidante.it/privacy.html" style="color:var(--accent)">Privacy</a>.</span>
+  <button onclick="rilievoConsent(true)" style="background:var(--accent);color:var(--on-accent);border:none;border-radius:8px;padding:8px 16px;font-weight:700;cursor:pointer">Accetta</button>
+  <button onclick="rilievoConsent(false)" style="background:transparent;color:var(--ink-2);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:8px 16px;font-weight:600;cursor:pointer">Rifiuta</button>
+</div>
+
+<script>
+  var PIXEL_ID = '852453100970451';
+  function loadPixel(){
+    if (window._rilievoPixelLoaded) return; window._rilievoPixelLoaded = true;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', PIXEL_ID); fbq('track', 'PageView');
+  }
+  function rilievoConsent(granted){
+    try { localStorage.setItem('rilievo:cookieconsent', granted ? 'granted' : 'denied'); } catch(e){}
+    var b = document.getElementById('cookie-banner'); if (b) b.style.display = 'none';
+    if (granted) loadPixel();
+  }
+  // Evento conversione sul clic "Apri l'app" (solo se il Pixel è attivo).
+  function rilievoLead(){ if (window.fbq) fbq('track', 'Lead'); }
+  // All'avvio: rispetta la scelta salvata; altrimenti mostra il banner.
+  (function(){
+    var c = null; try { c = localStorage.getItem('rilievo:cookieconsent'); } catch(e){}
+    if (c === 'granted') loadPixel();
+    else if (c !== 'denied') { var b = document.getElementById('cookie-banner'); if (b) b.style.display = 'flex'; }
+  })();
+</script>
 
 </body>
 </html>
