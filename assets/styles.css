@@ -169,9 +169,9 @@ img {
 }
 
 .brand-logo-img {
-  height: 80px;
+  height: 44px;
   width: auto;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .nav-menu {
@@ -397,6 +397,24 @@ img {
   gap: 10px;
 }
 
+/* Skill chips (used on chi-sono.html) */
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-chip {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--bg-surface-2);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+}
+
 /* About Section */
 .about-section {
   background: #0B0E14;
@@ -550,4 +568,55 @@ img {
     transform: none;
     transition: none;
   }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              ACCESSIBILITÀ                                 */
+/* -------------------------------------------------------------------------- */
+
+/* Stato di focus visibile per navigazione da tastiera (WCAG 2.1 - 2.4.7) */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.nav-cta:focus-visible,
+.app-link:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Fallback per browser senza supporto a :focus-visible */
+a:focus,
+button:focus,
+.btn:focus,
+.nav-cta:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+.btn:focus:not(:focus-visible),
+.nav-cta:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Link "salta al contenuto" per chi naviga da tastiera/screen reader */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 0 0 8px 0;
+  font-weight: 600;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  left: 0;
 }
