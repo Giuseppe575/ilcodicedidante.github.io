@@ -5,7 +5,7 @@
 > **Obiettivo**: Riprogettazione completa dell'interfaccia utente per creare una directory di progetti "Premium & Creative".
 
 ## 1. Visione del Prodotto
-"Il Codice di Dante" deve evolversi da una semplice lista di link a una vetrina esperienziale. L'interfaccia deve comunicare dualità: **Creatività** (per progetti come *Roastami*) e **Professionalità** (per strumenti come *MOVARISCH*). Il design deve essere pulito, moderno e di forte impatto visivo.
+"Il Codice di Dante" deve evolversi da una semplice lista di link a una vetrina esperienziale. L'interfaccia deve comunicare dualità: **Creatività** (per progetti come *Roastami*) e **Professionalità** (per strumenti come *KEMIVAL*). Il design deve essere pulito, moderno e di forte impatto visivo.
 
 ## 2. Obiettivi di Design (Visual Guidelines)
 Basato sui riferimenti visivi forniti:
@@ -54,7 +54,7 @@ Basato sui riferimenti visivi forniti:
 ### Fase 2: Implementazione Core
 - [ ] **Navbar**: Logo a sinistra, Link a destra, stile minimal.
 - [ ] **Hero Section**: Creazione del layout testo + card descrittiva.
-- [ ] **Feature Grid**: Implementazione delle card per Roastami e MOVARISCH con stili distinti.
+- [ ] **Feature Grid**: Implementazione delle card per Roastami e KEMIVAL con stili distinti.
 
 ### Fase 3: Personalizzazione e Dettagli
 - [ ] **Chi Sono**: Implementazione del blocco scuro con stats e immagine.
