@@ -63,3 +63,6 @@ Basato sui riferimenti visivi forniti:
 ### Fase 4: Polish
 - [ ] **Animazioni**: Ingresso elementi (Fade-in), Hover effects sulle card.
 - [ ] **Responsive**: Adattamento perfetto per Mobile e Tablet.
+## Verifica della scelta marketing
+
+`node --test tests/consent.test.cjs` controlla il blocco del Pixel prima del consenso, il rifiuto, la scadenza della preferenza, l’accettazione e la revoca. Il consenso viene richiesto soltanto nella pagina RILIEVO, dove è presente il Pixel. Le pagine KEMIVAL rimandano al Microsoft Store e alla landing dedicata.
