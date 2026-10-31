@@ -6,14 +6,14 @@
 
 <!-- ===== SEO ===== -->
 <title>RILIEVO — Verbali di sopralluogo con AI in pochi minuti | Il Codice di Dante</title>
-<meta name="description" content="RILIEVO: scatti la foto, descrivi a voce e l'AI genera il verbale di sopralluogo PDF conforme al D.Lgs 81/08, col tuo logo. Sicurezza, ambiente, antincendio, cantieri, acustica. Provala dal telefono." />
+<meta name="description" content="RILIEVO: scatti la foto, descrivi a voce e l'AI genera una bozza di verbale di sopralluogo PDF, col tuo logo. Sicurezza, ambiente, antincendio, cantieri, acustica. Provala dal telefono." />
 <meta name="keywords" content="verbale di sopralluogo, software verbali sicurezza, app RSPP, verbale sopralluogo PDF, D.Lgs 81/08, relazione antincendio, app sopralluoghi, sicurezza sul lavoro" />
 <link rel="canonical" href="https://www.ilcodicedidante.it/rilievo.html" />
 
 <!-- ===== Open Graph / social ===== -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="RILIEVO — Dal sopralluogo al verbale in minuti" />
-<meta property="og:description" content="Foto + voce → verbale PDF conforme col tuo logo. L'AI scrive la bozza tecnica, tu controlli e firmi." />
+<meta property="og:description" content="Foto + voce → bozza di verbale PDF col tuo logo. L'AI scrive la bozza tecnica, tu controlli e firmi." />
 <meta property="og:image" content="https://www.ilcodicedidante.it/assets/rilievo-social.png" />
 <meta property="og:url" content="https://www.ilcodicedidante.it/rilievo.html" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -70,6 +70,10 @@
   ul.feat{max-width:620px;margin:0 auto;list-style:none}
   ul.feat li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06)}
   ul.feat li::before{content:"✓ ";color:var(--accent);font-weight:800}
+#cookie-banner{position:fixed;left:12px;right:12px;bottom:12px;z-index:9999;background:var(--surface);border:1px solid var(--accent);border-radius:12px;padding:20px;color:var(--ink);box-shadow:0 8px 35px #0008}
+#cookie-banner[hidden]{display:none}#cookie-banner p{margin:0 0 14px}#cookie-banner a{color:var(--accent)}
+.consent-actions{display:flex;flex-wrap:wrap;gap:12px}.consent-actions button,#cookie-preferences{background:var(--surface);color:var(--ink);border:1px solid var(--accent);border-radius:8px;padding:10px 16px;cursor:pointer;font:inherit}
+.consent-actions button:focus-visible,#cookie-preferences:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 </style>
 </head>
 <body>
@@ -90,8 +94,8 @@
   <div class="badge">⚡ by ATIS · Il Codice di Dante</div>
   <h1>Dal sopralluogo al <span class="hl">verbale in minuti</span></h1>
   <p class="sub">Scatti la foto, descrivi a voce: l'AI scrive il testo tecnico e genera il
-     verbale PDF conforme al D.Lgs 81/08, col tuo logo. Tu controlli e firmi.</p>
-  <a class="cta" href="https://rilievo-atis.web.app" target="_blank" rel="noopener" onclick="rilievoLead()">Apri l'app — provala gratis →</a>
+     bozza di verbale PDF col tuo logo. Tu controlli e firmi.</p>
+  <a class="cta" href="https://rilievo-atis.web.app/register" onclick="rilievoLead()">Apri l'app — provala gratis →</a>
   <p style="margin-top:16px;color:var(--accent);font-weight:700;font-size:15px">🎁 5 crediti gratis alla registrazione — abbastanza per il tuo primo verbale completo</p>
 </header>
 
@@ -113,7 +117,7 @@
     <li>Verbali col tuo logo e intestazione</li>
     <li>Sicurezza, ambiente, antincendio, cantieri, acustica</li>
     <li>L'AI scrive la bozza, la firma e la responsabilità restano tue</li>
-    <li>Dati cifrati, server UE, conforme GDPR</li>
+    <li>La verifica tecnica del verbale resta al professionista</li>
   </ul>
 </section>
 
@@ -128,47 +132,22 @@
 </section>
 
 <section class="wrap center">
-  <a class="cta" href="https://rilievo-atis.web.app" target="_blank" rel="noopener" onclick="rilievoLead()">Inizia ora — il primo verbale è tuo →</a>
+  <a class="cta" href="https://rilievo-atis.web.app/register" onclick="rilievoLead()">Inizia ora — il primo verbale è tuo →</a>
 </section>
 
 <footer>
   RILIEVO — un progetto <a href="https://www.ilcodicedidante.it">Il Codice di Dante</a> ·
   ATIS — Strifezza Giuseppe · <a href="https://rilievo-atis.web.app">rilievo-atis.web.app</a> ·
-  <a href="https://www.ilcodicedidante.it/privacy.html">Privacy</a>
+  <a href="privacy.html">Privacy</a> · <button type="button" id="cookie-preferences">Preferenze cookie</button>
 </footer>
 
-<!-- ===== Avviso cookie informativo (Pixel attivo al caricamento; opt-out via Privacy) ===== -->
-<div id="cookie-banner" style="display:none;position:fixed;left:0;right:0;bottom:0;z-index:9999;
-  background:var(--surface);border-top:1px solid rgba(255,255,255,.12);padding:14px 18px;
-  gap:12px;align-items:center;flex-wrap:wrap;justify-content:center;font-size:13px;color:var(--ink-2)">
-  <span style="flex:1;min-width:220px">Usiamo cookie di marketing (Meta Pixel) per misurare le campagne. Continuando accetti; dettagli e opt-out nella <a href="https://www.ilcodicedidante.it/privacy.html" style="color:var(--accent)">Privacy</a>.</span>
-  <button onclick="rilievoDismiss()" style="background:var(--accent);color:var(--on-accent);border:none;border-radius:8px;padding:8px 16px;font-weight:700;cursor:pointer">Ho capito</button>
-</div>
-
-<script>
-  var PIXEL_ID = '1717791173002936';
-  function loadPixel(){
-    if (window._rilievoPixelLoaded) return; window._rilievoPixelLoaded = true;
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', PIXEL_ID); fbq('track', 'PageView');
-  }
-  function rilievoDismiss(){
-    try { localStorage.setItem('rilievo:cookienotice', 'seen'); } catch(e){}
-    var b = document.getElementById('cookie-banner'); if (b) b.style.display = 'none';
-  }
-  // Evento conversione sul clic "Apri l'app".
-  function rilievoLead(){ if (window.fbq) fbq('track', 'Lead'); }
-  // Pixel attivo al caricamento (modalità B). Avviso mostrato finché non confermato.
-  loadPixel();
-  (function(){
-    var seen = null; try { seen = localStorage.getItem('rilievo:cookienotice'); } catch(e){}
-    if (seen !== 'seen') { var b = document.getElementById('cookie-banner'); if (b) b.style.display = 'flex'; }
-  })();
-</script>
-
+<section id="cookie-banner" role="region" aria-label="Scelta cookie pubblicitari" hidden>
+  <p>Con il tuo consenso usiamo Meta Pixel per misurare visite e clic verso RILIEVO. Puoi rifiutare e usare comunque il sito. <a href="privacy.html">Informativa privacy</a>.</p>
+  <div class="consent-actions">
+    <button type="button" id="accept-marketing">Accetta marketing</button>
+    <button type="button" id="reject-marketing">Rifiuta marketing</button>
+  </div>
+</section>
+<script src="assets/rilievo-consent.js"></script>
 </body>
 </html>
