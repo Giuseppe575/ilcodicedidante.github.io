@@ -65,4 +65,8 @@ Basato sui riferimenti visivi forniti:
 - [ ] **Responsive**: Adattamento perfetto per Mobile e Tablet.
 ## Verifica della scelta marketing
 
-`node --test tests/consent.test.cjs` controlla il blocco del Pixel prima del consenso, il rifiuto, la scadenza della preferenza, l’accettazione e la revoca. Il consenso viene richiesto soltanto nella pagina RILIEVO, dove è presente il Pixel. Le pagine KEMIVAL rimandano al Microsoft Store e alla landing dedicata.
+`node --test tests/consent.test.cjs` controlla il blocco del Pixel prima del consenso, il rifiuto, la scadenza della preferenza, l’accettazione e la revoca. Il consenso viene richiesto soltanto nella pagina RILIEVO, dove è presente il Pixel. Tutti i pulsanti relativi a KEMIVAL nelle vetrine e nella scheda rimandano direttamente a Microsoft Store.
+
+## Pubblicazione effettiva
+
+Il sito pubblico `www.ilcodicedidante.it` è ospitato su Aruba Hosting Linux. Il repository conserva i sorgenti; un merge Git non sostituisce il caricamento nello spazio web Aruba. Prima di aggiornare file esistenti, scaricare un backup e confrontarlo con il ramo sorgente per conservare eventuali modifiche presenti soltanto sull’hosting.
